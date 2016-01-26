@@ -1,3 +1,4 @@
+![image](https://github.com/KingJA/KingJA_Camera/blob/master/images/kingja150.png)
 # KingJA_Camera 自定义相机
 * 自定义存储路径
 * 自定义拍摄设置(尺寸)

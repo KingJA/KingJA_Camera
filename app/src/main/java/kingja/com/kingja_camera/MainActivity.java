@@ -22,8 +22,8 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private ImageView iv;
-    private static int RES_CAMERA = 1;
-    private static int RES_CUSTOM_CAMERA = 2;
+    private static final int RES_CAMERA = 1;
+    private static final int RES_CUSTOM_CAMERA = 2;
     private File imageFile;
 
     @Override
@@ -54,9 +54,22 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK && requestCode == RES_CAMERA) {
-            scaleImg(iv, imageFile.getAbsolutePath());
+        switch (requestCode) {
+            case RES_CAMERA:
+                if (resultCode == RESULT_OK) {
+                    scaleImg(iv, imageFile.getAbsolutePath());
+                }
+                break;
+            default:
+                break;
         }
+//        if (data == null) {
+//            Log.i(TAG, "onActivityResult: "+null);
+//            return;
+//        }
+//        if (resultCode == RESULT_OK && requestCode == RES_CAMERA) {
+//            scaleImg(iv, imageFile.getAbsolutePath());
+//        }
     }
 
 

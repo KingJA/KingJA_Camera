@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
->
+    android:orientation="vertical">
 
     <Button
-        android:onClick="camera"
-        android:text="拍照"
+        android:id="@+id/btn_takePhoto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="takePhoto"
+        android:text="拍照并保存到本地" />
+
     <Button
-        android:onClick="customcamera"
-        android:text="自定义相机"
+        android:id="@+id/btn_takePhotoAndSave"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="takePhotoAndrSave"
+        android:text="拍照并保存到本地" />
+
+    <Button
+        android:id="@+id/btn_takeCustomPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="customcamera"
+        android:text="自定义相机" />
+
     <ImageView
         android:id="@+id/iv"
-        android:scaleType="centerCrop"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
 </LinearLayout>
